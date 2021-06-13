@@ -1,0 +1,8 @@
+{
+	"editor.semanticHighlighting.enabled": true,
+	"workbench.colorTheme": "Operator Mono Dark Theme",
+	"workbench.preferredDarkColorTheme": "Snazzy Operator",
+	"material-icon-theme.activeIconPack": "react",
+	"editor.fontFamily": "Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true
+}
