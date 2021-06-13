@@ -4,7 +4,7 @@ import SignIn from '../../Components/signin/signin.component';
 import SignUp from '../../Components/signup/signup.component';
 
 const SignInAndSignUpPage = () => (
-	<div className='signin-and-sign-up'>
+	<div className='sign-in-and-sign-up'>
 		<SignIn />
 		<SignUp />
 	</div>
