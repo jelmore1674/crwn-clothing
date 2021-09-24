@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomePage from './Pages/hompage/homepage.component';
+import CheckoutPage from './Components/checkout/checkout.component';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ShopPage from './Pages/shoppage/shop.component';
 import Header from './Components/header/header.component';
@@ -40,8 +41,9 @@ class App extends React.Component {
 			<div>
 				<Header />
 				<Switch>
-					<Route exact path='/' component={HomePage} />{' '}
-					<Route path='/shop' component={ShopPage} />{' '}
+					<Route exact path='/' component={HomePage} />
+					<Route path='/shop' component={ShopPage} />
+					<Route exact path='/checkout' component={CheckoutPage} />
 					<Route
 						exact
 						path='/signin'
@@ -52,8 +54,8 @@ class App extends React.Component {
 								<SignInAndSignUpPage />
 							)
 						}
-					/>{' '}
-				</Switch>{' '}
+					/>
+				</Switch>
 			</div>
 		);
 	}
