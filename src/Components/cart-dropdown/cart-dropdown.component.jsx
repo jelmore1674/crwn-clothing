@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectCartItems } from '../../Redux/cart/cart.selector';
+import { toggleCartHidden } from '../../Redux/cart/cart.actions';
 import './cart-drowpdown.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
 import { withRouter } from 'react-router-dom';
 
-const CartDropdown = ({ cartItems, history }) => {
+const CartDropdown = ({ cartItems, history, dispatch }) => {
 	const handleGoToCheckout = () => {
 		history.push('./checkout');
+		dispatch(toggleCartHidden());
 	};
 
 	return (
