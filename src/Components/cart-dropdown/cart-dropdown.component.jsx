@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { selectCartItems } from '../../Redux/cart/cart.selector';
 import { toggleCartHidden } from '../../Redux/cart/cart.actions';
-import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
 import { withRouter } from 'react-router-dom';
 import {

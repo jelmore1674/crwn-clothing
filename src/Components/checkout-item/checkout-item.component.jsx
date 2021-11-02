@@ -7,7 +7,6 @@ import {
 	addItem,
 	removeItem,
 } from '../../Redux/cart/cart.actions';
-import { NameContainer } from '../cart-item/cart-item.styles';
 
 import {
 	CheckoutItemContainer,
