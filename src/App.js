@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomePage from './Pages/hompage/homepage.component';
-import CheckoutPage from './Components/checkout/checkout.component';
+import CheckoutPage from './Pages/checkout/checkout.component';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ShopPage from './Pages/shoppage/shop.component';
 import Header from './Components/header/header.component';

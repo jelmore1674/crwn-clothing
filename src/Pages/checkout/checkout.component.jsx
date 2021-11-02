@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CheckoutItem from '../checkout-item/checkout-item.component';
+import CheckoutItem from '../../Components/checkout-item/checkout-item.component';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';

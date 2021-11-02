@@ -5,7 +5,6 @@ import {
 	PreviewContainer,
 	TitleContainer,
 } from './collection-preview.styles';
-import './collection-preview.styles.scss';
 
 const CollectionPreview = ({ title, items }) => (
 	<CollectionPreviewContainer>
