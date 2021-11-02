@@ -1,13 +1,13 @@
 import React from 'react';
-import { addItem } from '../../Redux/cart/cart.actions';
 import { connect } from 'react-redux';
+import { addItem } from '../../Redux/cart/cart.actions';
 import {
-	PriceContainer,
 	AddButton,
 	BackgroundImage,
 	CollectionFooterContainer,
 	CollectionItemContainer,
 	NameContainer,
+	PriceContainer,
 } from './collection-item.styles';
 
 const CollectionItem = ({ item, addItem }) => {
