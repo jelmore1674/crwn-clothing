@@ -1,50 +1,56 @@
 import React from 'react';
 
 import CheckoutItem from '../checkout-item/checkout-item.component';
-import StripeCheckoutButton from '../stripe-button/stripe-button.component';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './checkout.styles.scss';
 import {
 	selectCartItems,
 	selectCartTotal,
 } from '../../Redux/cart/cart.selector';
+import {
+	CheckoutPageContainer,
+	CheckoutHeaderContainer,
+	HeaderBlockContainer,
+	TotalContainer,
+	WarningContainer,
+	StripeCheckoutButtonContainer,
+} from './checkout.styles';
 
 function CheckoutPage({ cartItems, total }) {
 	return (
-		<div className='checkout-page'>
-			<div className='checkout-header'>
-				<div className='header-block'>
+		<CheckoutPageContainer>
+			<CheckoutHeaderContainer>
+				<HeaderBlockContainer>
 					<span>Product</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlockContainer>
+				<HeaderBlockContainer>
 					<span>Description</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlockContainer>
+				<HeaderBlockContainer>
 					<span>Quantity</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlockContainer>
+				<HeaderBlockContainer>
 					<span>Price</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlockContainer>
+				<HeaderBlockContainer>
 					<span>Remove</span>
-				</div>
-			</div>
+				</HeaderBlockContainer>
+			</CheckoutHeaderContainer>
 			{cartItems.map((cartItem) => (
 				<CheckoutItem cartItem={cartItem} key={cartItem.id} />
 			))}
-			<div className='total'>
+			<TotalContainer>
 				<span>TOTAL: ${total}</span>
-			</div>
-			<StripeCheckoutButton price={total} />
-			<div className='test-warning'>
+			</TotalContainer>
+			<StripeCheckoutButtonContainer price={total} />
+			<WarningContainer>
 				** Please use the following test credit card for payment **
 				<br />
 				4242 4242 4242 4242 - EXP 01/22 - CVC - 123
-			</div>
-		</div>
+			</WarningContainer>
+		</CheckoutPageContainer>
 	);
 }
 
